@@ -1,0 +1,6 @@
+package com.yugiohwiki;
+
+@Entity
+public class User {
+	
+}

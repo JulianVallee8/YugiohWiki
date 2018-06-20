@@ -1,0 +1,10 @@
+package com.yugiohwiki.services;
+
+public class MonsterService {
+	
+	public Monster show(int id, String userName);
+	public Monster create(String userName, Todo todo);
+	public Monster update(int id, String name, Todo todo);
+	public boolean destroy(int id, String userName);
+
+}

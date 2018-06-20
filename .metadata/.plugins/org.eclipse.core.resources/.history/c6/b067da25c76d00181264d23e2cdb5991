@@ -1,0 +1,5 @@
+package com.yugiohwiki.repositories;
+
+public interface MonsterRepository extends JpaRepository<Monster, Integer> {
+
+}

@@ -1,0 +1,51 @@
+package com.yugiohwiki.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.yugiohwiki.Monster;
+import com.yugiohwiki.repositories.MonsterRepository;
+import com.yugiohwiki.repositories.UserRepository;
+
+@Service
+public class MonsterServiceImpl implements MonsterService {
+	
+	@Autowired
+	private MonsterRepository monsterRepo;
+	
+	@Autowired
+	private UserRepository userRepo;
+	
+	
+	@Override
+	public List<Monster> showAll() {
+		return monsterRepo.findAll();
+	}
+	
+	@Override
+	public Monster show(int id) {
+		return monsterRepo.findById(id).get();
+	}
+
+	@Override
+	public Monster create(String userName, Monster monster) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Monster update(int id, String name, Monster monster) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean destroy(int id, String userName) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+}
