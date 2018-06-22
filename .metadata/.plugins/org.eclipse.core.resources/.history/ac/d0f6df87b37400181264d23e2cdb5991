@@ -1,0 +1,5 @@
+package com.yugiohwiki.controller;
+
+public class Monster {
+
+}

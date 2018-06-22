@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.yugiohwiki.controller.Monster.java&apos; to &apos;MonsterController.java&apos;&#x0A;- Original project: &apos;YugiohwikiREST&apos;&#x0A;- Original element: &apos;com.yugiohwiki.controller.Monster.java&apos;&#x0A;- Renamed element: &apos;com.yugiohwiki.controller.MonsterController.java&apos;" description="Rename compilation unit &apos;Monster.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;com.yugiohwiki.controller{Monster.java" name="MonsterController.java" references="false" stamp="1529518100404" version="1.0"/>
+</session>

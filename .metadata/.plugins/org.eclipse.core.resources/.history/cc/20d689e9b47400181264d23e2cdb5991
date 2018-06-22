@@ -1,0 +1,24 @@
+package com.yugiohwiki.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.yugiohwiki.services.MonsterService;
+
+@RestController
+@RequestMapping(path="api")
+@CrossOrigin({"*", "http://localhost:4200"})
+public class Monster {
+	
+	@Autowired
+	private MonsterService monsterServ;
+	
+	@RequestMapping(path="ping", method=RequestMethod.GET)
+	public String ping(){
+		return "pong";
+	}
+
+}
