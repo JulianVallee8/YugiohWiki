@@ -31,6 +31,7 @@ public class MonsterController {
 	
 	@RequestMapping(path="monsters", method=RequestMethod.GET)
 	public List<Monster> showAllMonsters(HttpServletRequest req, HttpServletResponse res){
+//		System.out.println(monsterServ.showAll().toString());
 		return monsterServ.showAll();
 	}
 	
@@ -38,21 +39,11 @@ public class MonsterController {
 	public Monster showAMonster(HttpServletRequest req, HttpServletResponse res, @PathVariable int id) {
 		return monsterServ.showMonsterById(id);
 	}
-	
-	@RequestMapping(path="monsters", method=RequestMethod.POST)
-	public Monster create(HttpServletRequest req, HttpServletResponse res, @RequestBody Monster monster) {
-		System.out.println(monster);
-		return monsterServ.createMonster("yugioh", monster);
-	}
-	
-	@RequestMapping(path="monsters/{id}", method=RequestMethod.PUT)
-	public Monster update(HttpServletRequest req, HttpServletResponse res, @PathVariable int id, @RequestBody Monster monster) {
-		return monsterServ.updateMonster(id, "yugioh", monster);
-	}
-	
-	@RequestMapping(path="monsters/{id}", method=RequestMethod.DELETE)
-	public boolean destroy(HttpServletRequest req, HttpServletResponse res, @PathVariable int id) {
-		return monsterServ.destroy(id, "yugioh");
-	}
+//	
+//	@RequestMapping(path="monsters", method=RequestMethod.POST)
+//	public Monster create(HttpServletRequest req, HttpServletResponse res, @RequestBody Monster monster) {
+//		System.out.println(monster);
+//		return monsterServ.createMonster("jay", monster);
+//	}
 
 }

@@ -47,7 +47,7 @@ public class MonsterController {
 	
 	@RequestMapping(path="monsters/{id}", method=RequestMethod.PUT)
 	public Monster update(HttpServletRequest req, HttpServletResponse res, @PathVariable int id, @RequestBody Monster monster) {
-		return monsterServ.updateMonster(id, "yugioh", monster);
+		return monsterServ.updateMonster(id,"yugioh", monster);
 	}
 	
 	@RequestMapping(path="monsters/{id}", method=RequestMethod.DELETE)

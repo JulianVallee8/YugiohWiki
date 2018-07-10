@@ -10,7 +10,7 @@ public interface MonsterService {
 	public Monster showMonsterById(int id);
 //	public Monster createMonster(Monster monster);
 	public Monster createMonster(String userName, Monster monster);
-	public Monster updateMonster(int id, String userName, Monster monster);
+	public Monster updateMonster(int id, Monster monster);
 	public boolean destroy(int id, String userName);
 
 }

@@ -31,21 +31,16 @@ public class MonsterServiceImpl implements MonsterService {
 	}
 
 	@Override
-	public Monster createMonster(String userName, Monster monster) {
+	public Monster createMonster(Monster monster) {
 		//TODO maybe remove userName and have a parameter set up in monster to take the userName
 		int userId = userRepo.findByUsername(userName).getId();
 		monster.setCreatedMonster(userId);
 		monsterRepo.saveAndFlush(monster);
 		return monster;
 	}
-//	@Override
-//	public Monster createMonster(Monster monster) {
-//		
-//		return monsterRepo.saveAndFlush(monster);
-//	}
 
 	@Override
-	public Monster updateMonster(int id, String userName, Monster monster) {
+	public Monster updateMonster(int id, Monster monster) {
 		Monster updateMonster = monsterRepo.findById(id).get();
 		if(monster.getAttackpoints() != 0) {
 			updateMonster.setAttackpoints(monster.getAttackpoints());

@@ -38,14 +38,9 @@ public class MonsterServiceImpl implements MonsterService {
 		monsterRepo.saveAndFlush(monster);
 		return monster;
 	}
-//	@Override
-//	public Monster createMonster(Monster monster) {
-//		
-//		return monsterRepo.saveAndFlush(monster);
-//	}
 
 	@Override
-	public Monster updateMonster(int id, String userName, Monster monster) {
+	public Monster updateMonster(int id, Monster monster) {
 		Monster updateMonster = monsterRepo.findById(id).get();
 		if(monster.getAttackpoints() != 0) {
 			updateMonster.setAttackpoints(monster.getAttackpoints());

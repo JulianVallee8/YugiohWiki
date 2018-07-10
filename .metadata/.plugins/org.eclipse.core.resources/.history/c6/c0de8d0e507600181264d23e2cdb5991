@@ -35,10 +35,13 @@ public class Monster {
 	private String monsterImageUrl;
 	
 	
-	@Column(name="last_edit")
+	@Column(name="editTimestamp")
+	private int editTime;
+	
+	@Column(name="lastEdit")
 	private int lastEdit;
 	
-	@Column(name="created_monster")
+	@Column(name="createdMonster")
 	private int createdMonster;
 	
 	// END FIELDS
@@ -50,9 +53,11 @@ public class Monster {
 	public String toString() {
 		return "Monster [id=" + id + ", name=" + name + ", attackpoints=" + attackpoints + ", defensepoints="
 				+ defensepoints + ", attribute=" + attribute + ", type=" + type + ", description=" + description
-				+ ", monsterImageUrl=" + monsterImageUrl + ", lastEdit=" + lastEdit + ", createdMonster="
-				+ createdMonster + "]";
+				+ ", monsterImageUrl=" + monsterImageUrl + ", editTime=" + editTime + ", lastEdit=" + lastEdit
+				+ ", createdMonster=" + createdMonster + "]";
 	}
+
+
 
 
 
@@ -121,6 +126,17 @@ public class Monster {
 		this.monsterImageUrl = monsterImageUrl;
 	}
 	
+	public int getEditTime() {
+		return editTime;
+	}
+
+
+	public void setEditTime(int editTime) {
+		this.editTime = editTime;
+		
+		
+	}
+
 
 	public int getLastEdit() {
 		return lastEdit;
@@ -145,7 +161,7 @@ public class Monster {
 
 	// START CONSTRUCTORS
 	public Monster(int id, String name, int attackpoints, int defensepoints, String attribute, String type,
-			String description, String monsterImageUrl, int lastEdit, int createdMonster) {
+			String description, String monsterImageUrl, int editTime, int lastEdit, int createdMonster) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -155,6 +171,7 @@ public class Monster {
 		this.type = type;
 		this.description = description;
 		this.monsterImageUrl = monsterImageUrl;
+		this.editTime = editTime;
 		this.lastEdit = lastEdit;
 		this.createdMonster = createdMonster;
 	}

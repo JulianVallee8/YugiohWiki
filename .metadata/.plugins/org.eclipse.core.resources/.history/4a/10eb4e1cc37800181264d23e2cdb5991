@@ -45,7 +45,7 @@ public class MonsterServiceImpl implements MonsterService {
 //	}
 
 	@Override
-	public Monster updateMonster(int id, String userName, Monster monster) {
+	public Monster updateMonster(int id, Monster monster) {
 		Monster updateMonster = monsterRepo.findById(id).get();
 		if(monster.getAttackpoints() != 0) {
 			updateMonster.setAttackpoints(monster.getAttackpoints());

@@ -42,17 +42,17 @@ public class MonsterController {
 	@RequestMapping(path="monsters", method=RequestMethod.POST)
 	public Monster create(HttpServletRequest req, HttpServletResponse res, @RequestBody Monster monster) {
 		System.out.println(monster);
-		return monsterServ.createMonster("yugioh", monster);
+		return monsterServ.createMonster(monster);
 	}
 	
 	@RequestMapping(path="monsters/{id}", method=RequestMethod.PUT)
 	public Monster update(HttpServletRequest req, HttpServletResponse res, @PathVariable int id, @RequestBody Monster monster) {
-		return monsterServ.updateMonster(id, "yugioh", monster);
+		return monsterServ.updateMonster(id, monster);
 	}
 	
 	@RequestMapping(path="monsters/{id}", method=RequestMethod.DELETE)
 	public boolean destroy(HttpServletRequest req, HttpServletResponse res, @PathVariable int id) {
-		return monsterServ.destroy(id, "yugioh");
+		return monsterServ.destroy(id, "jay");
 	}
 
 }
